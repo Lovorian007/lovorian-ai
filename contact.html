@@ -1,108 +1,3 @@
-
-/
-Got it — that changes the calculus somewhat. If Netlify hasn't been pointed at lovorian.ai yet and there's no public traffic hitting it, the "someone hits a dead CTA today" risk basically disappears. You could push now and the broken links just sit there unseen until you flip DNS over.
-
-But a couple of things still worth flagging before you go:
-
-1. Netlify's own default URL is public the moment you deploy.
-Even before lovorian.ai DNS is pointed at it, Netlify gives you a live something-random.netlify.app URL immediately, and that URL is publicly crawlable and reachable by anyone who has it — including search engines, if it's not blocked. So "not live yet" isn't quite the same as "not reachable." Worth checking whether that default Netlify URL has noindex on it or is otherwise not something you'd mind someone stumbling into with dead CTAs.
-
-2. The old test-build history is relevant here.
-Home's file replaced an earlier index.html that had noindex,nofollow set specifically because it was a test build not ready for search engines. If that flag isn't still set (or intentionally re-added) on this deploy, you lose that protection the moment it's reachable at all — DNS pointed or not.
-
-3. Once you do point lovorian.ai at it, there's no real "grace period."
-DNS propagates, Google can pick it up fast, and there's no way to guarantee you'll have Audit/Work built before the first crawl or before someone finds the link some other way (social share, someone testing the domain, etc.).
-
-Given that — pushing to Netlify now (pre-DNS) to get the deploy pipeline working and see the real thing rendered is reasonable and low-risk. I'd just treat "point lovorian.ai at it" as the actual go-live moment, and hold that until Audit exists (or the CTAs get a coming-soon fallback).
-
-Want me to check whether noindex is still set in the current index.html, so at minimum the Netlify default URL isn't sitting there indexable with dead CTAs in the meantime?
-
-yes
-
-
-Check whether noindex/robots meta tags are present in the repo-ready files
-Check whether noindex/robots meta tags are present in the repo-ready files
-Confirmed — none of the four repo-ready files have noindex set. That old test-build protection was intentionally removed when Home's file was replaced (per the checklist: "remove noindex,nofollow" was explicitly Phase 1, item 1.1 of the audit roadmap — the single biggest SEO unlock). So right now, all four pages are fully indexable the moment they're reachable at any URL, including Netlify's own default *.netlify.app address.
-
-That means: the moment you deploy to Netlify — even before lovorian.ai DNS is pointed at it — the site is crawlable and indexable at whatever Netlify subdomain it gets assigned, with those dead CTA links live.
-
-Given that, here's the actual tradeoff:
-
-Option A — Deploy as-is, accept the risk window. Low realistic exposure since nobody knows the Netlify URL yet and it's not linked from anywhere, but not zero — bots do sometimes discover .netlify.app URLs, and if anyone shares the link before Audit/Work exist, it's live with broken CTAs.
-
-Option B — Re-add noindex just for this pre-launch Netlify deploy, then strip it back out (per the roadmap's Phase 1.1) once Audit/Work are built and you're ready to point lovorian.ai at it. This is the safer version of "get it live on Netlify now, finish the rest later" — you get the deploy working, you can view the real rendered site, but it stays out of search results and off crawlers' radar until you deliberately flip the switch.
-
-Option C — Fix the CTA links now (coming-soon page or redirect to Contact) instead of noindex, so the site is both indexable and has no dead ends, whenever it does get discovered.
-
-I'd lean toward B — it's the smallest change, it's temporary and self-documenting, and it matches the exact pattern the roadmap already established (noindex until ready, then remove). Want me to add noindex,nofollow back into all four files for this deploy, with a note in the doc to strip it before pointing lovorian.ai at Netlify?
-
-yes
-
-
-Edited 4 files, ran a command
-Edited 4 files, ran a command
-Now verifying and re-validating schema wasn't disturbed:
-
-
-Verify noindex added correctly and schema still validates
-Verify noindex added correctly and schema still validates
-All four confirmed clean — noindex present with a self-documenting removal condition, schema untouched. Copying to outputs:
-
-
-Ran 2 commands, read a file
-Ran 2 commands, read a file
-All four files now have noindex, nofollow set, with a self-documenting comment explaining why and when to remove it. I also logged the reasoning and removal trigger directly into the project instructions doc, so it doesn't get lost or accidentally left in place once you actually launch.
-
-Next step for GitHub: these four files need to replace the current versions in the repo (same filenames — index.html, contact.html, services.html, about.html — just with the noindex tag added). Want the Claude for Chrome prompt to push these updates, or would you rather handle the re-upload yourself since it's a quick swap?
-
-Once that's done, you're clear to push to Netlify and check the deploy without worrying about the site showing up in search results or getting crawled with dead CTAs in the meantime.
-
-
-Home v1
-Code · HTML 
-
-Contact v2
-Code · HTML 
-
-Services v1
-Code · HTML 
-
-About v1
-Code · HTML 
-
-01 project instructions
-Document · MD 
-claude for chrome, it can autorun
-
-Prompt to paste into Claude for Chrome:
-
-Go to my lovorian-ai GitHub repo. I need to update four existing files with new versions I'll attach — same filenames, just replacing content:
-
-index.html (replace with attached home-v1.html content)
-contact.html (replace with attached contact-v2.html content)
-services.html (replace with attached services-v1.html content)
-about.html (replace with attached about-v1.html content)
-For each file: click into it in the repo, click the edit (pencil) icon, select all existing content, delete it, and paste in the new content from the corresponding attached file. Do this for all four files.
-
-After each file's content is replaced, commit directly to main with this commit message: "Add temporary noindex meta tag ahead of pre-launch Netlify deploy"
-
-You can proceed through all four files and commit each one without stopping to ask me — just do them one after another. When all four are done, show me the repo's file list and confirm each file's "last updated" timestamp changed, so I can verify all four landed.
-
-Do NOT touch the assets folder, and do NOT trigger any Netlify deploy or build — just update these four files in GitHub.
-
-Attach the four updated files from this chat (home-v1.html, contact-v2.html, services-v1.html, about-v1.html) when you send that to Claude for Chrome. Once it confirms all four are updated, you're clear to push to Netlify and check the deploy — the noindex tag will keep it out of search results until you're ready to point lovorian.ai at it.
-
-
-
-
-
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-
-
-Contact v2 · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,23 +116,23 @@ Contact v2 · HTML
     margin: 10px 0;
   }
   .stacked-tagline { font-size: 11px; letter-spacing: 0.16em; color: var(--gold); text-transform: uppercase; }
- 
+
   header { display: flex; justify-content: center; align-items: center; padding: 24px 48px; max-width: 1200px; margin: 0 auto; }
   nav ul { list-style: none; display: flex; gap: 32px; }
   nav a { color: var(--white); text-decoration: none; font-size: 15px; font-weight: 500; opacity: 0.85; }
   nav a.current { opacity: 1; color: var(--gold); font-weight: 600; }
   .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 10px 20px; border-radius: 4px; font-weight: 600 !important; opacity: 1 !important; }
- 
+
   .locked-label {
     display: inline-block; background: rgba(201,162,75,0.15); color: var(--gold);
     border: 1px solid rgba(201,162,75,0.4); font-size: 12px; font-weight: 600;
     letter-spacing: 0.05em; padding: 5px 14px; border-radius: 999px; margin-bottom: 20px;
   }
- 
+
   .hero-section { max-width: 640px; margin: 0 auto; text-align: center; padding: 60px 24px 50px; }
   .hero-section h1 { font-size: 36px; line-height: 1.2; margin-bottom: 18px; }
   .hero-section p { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.82); }
- 
+
   .form-section { background: var(--charcoal); padding: 56px 48px; }
   .form-inner { max-width: 480px; margin: 0 auto; }
   .form-group { margin-bottom: 20px; }
@@ -256,31 +151,31 @@ Contact v2 · HTML
     font-weight: 600; font-size: 15px; text-decoration: none; border: none; cursor: pointer;
     display: inline-block; margin-top: 8px;
   }
- 
+
   .direct-section { padding: 48px 48px; text-align: center; }
   .direct-inner { max-width: 480px; margin: 0 auto; }
   .direct-inner h2 { font-size: 22px; margin-bottom: 20px; }
   .contact-line { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 10px; }
   .contact-line strong { color: var(--gold); font-weight: 600; }
- 
+
   .nap-section { background: var(--charcoal); padding: 40px 48px; text-align: center; border-top: 1px solid rgba(201,162,75,0.2); }
   .nap-inner { max-width: 480px; margin: 0 auto; }
   .nap-inner .biz-name { font-family: 'Fraunces', serif; font-size: 19px; color: var(--white); margin-bottom: 8px; }
   .nap-inner .biz-location { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 10px; }
   .nap-inner .biz-contact { font-size: 14px; color: rgba(255,255,255,0.6); }
- 
+
   footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.1); padding: 32px 48px; text-align: center; color: var(--mid-gray); font-size: 13px; }
 </style>
 </head>
 <body>
- 
+
 <div class="stacked-logo-block">
   <img class="stacked-mark" src="assets/lovorian-phoenix-logo.png" alt="Lovorian phoenix mark">
   <div class="stacked-name">LOVORIAN CONSULTING</div>
   <div class="stacked-divider"></div>
   <div class="stacked-tagline">From AI-Uncertain to AI-Operational</div>
 </div>
- 
+
 <header>
   <nav>
     <ul>
@@ -294,12 +189,12 @@ Contact v2 · HTML
     </ul>
   </nav>
 </header>
- 
+
 <section class="hero-section">
   <h1>Let&rsquo;s talk about where you stand.</h1>
   <p>Tell me a bit about your business, and I&rsquo;ll get back to you within 24 hours.</p>
 </section>
- 
+
 <section class="form-section">
   <div class="form-inner">
     <h2 style="font-size:22px; margin-bottom:8px;">Tell me what you need</h2>
@@ -342,7 +237,7 @@ Contact v2 · HTML
     </form>
   </div>
 </section>
- 
+
 <section class="direct-section">
   <div class="direct-inner">
     <h2>Prefer to skip the form?</h2>
@@ -351,7 +246,7 @@ Contact v2 · HTML
     <p class="contact-line"><strong>Phone:</strong> 310-344-5668</p>
   </div>
 </section>
- 
+
 <section class="nap-section">
   <div class="nap-inner">
     <h2 style="font-size:18px; margin-bottom:16px;">Where to find Lovorian Consulting</h2>
@@ -360,34 +255,10 @@ Contact v2 · HTML
     <div class="biz-contact">hello@lovorian.ai &middot; 310-344-5668</div>
   </div>
 </section>
- 
+
 <footer>
   hello@lovorian.ai &middot; lovorian.ai &middot; Lucas Rigg, Managing Consultant / Founder &middot; Wyoming LLC, CA-qualified
 </footer>
- 
+
 </body>
 </html>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
