@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<!--
-  TEST BUILD — NOT THE LIVE SITE
-  This is a pre-launch build pushed for the purpose of running Lovorian's own
-  Digital Presence Audit tool against the deployed structure and schema.
-  Copy is drafted, not fully locked (proof strip has an open [CONFIRM] item).
-  Do not treat this as the public launch version.
--->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>[TEST BUILD] Lovorian Consulting — Know your score. Get the roadmap. Let us fix it.</title>
-<meta name="description" content="Lovorian shows you whether customers can actually find your business online — then builds the plan and does the work to fix what's holding you back.">
+<title>Lovorian Consulting | AI Visibility Audits for Southern California Businesses</title>
+<meta name="description" content="Lovorian shows you whether customers can find your business on Google and on the AI tools changing how they search, then builds the plan and does the work to fix what's holding you back. $500 audit, results in two business days.">
+<link rel="canonical" href="https://lovorian.ai/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,40 +16,52 @@
       "@type": "Organization",
       "@id": "https://lovorian.ai/#organization",
       "name": "Lovorian Consulting",
-      "url": "https://lovorian.ai",
-      "logo": "https://lovorian.ai/assets/logo-transparent.png",
+      "url": "https://lovorian.ai/",
+      "logo": "https://lovorian.ai/assets/lovorian-phoenix-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@lovorian.ai",
+        "contactType": "customer service",
+        "areaServed": "US-CA"
+      },
       "founder": {
         "@type": "Person",
         "name": "Lucas Rigg",
         "jobTitle": "Managing Consultant / Founder"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "hello@lovorian.ai",
-        "telephone": "+1-310-344-5668"
       }
     },
     {
       "@type": "WebSite",
       "@id": "https://lovorian.ai/#website",
-      "url": "https://lovorian.ai",
+      "url": "https://lovorian.ai/",
       "name": "Lovorian Consulting",
       "publisher": { "@id": "https://lovorian.ai/#organization" }
     },
     {
       "@type": "WebPage",
-      "@id": "https://lovorian.ai/#homepage",
-      "url": "https://lovorian.ai",
-      "name": "Lovorian Consulting — Know your score. Get the roadmap. Let us fix it.",
-      "description": "Lovorian shows you whether customers can actually find your business online — then builds the plan and does the work to fix what's holding you back.",
+      "@id": "https://lovorian.ai/#webpage",
+      "url": "https://lovorian.ai/",
+      "name": "Lovorian Consulting | AI Visibility Audits for Southern California Businesses",
       "isPartOf": { "@id": "https://lovorian.ai/#website" },
-      "about": { "@id": "https://lovorian.ai/#organization" }
+      "about": { "@id": "https://lovorian.ai/#organization" },
+      "description": "Lovorian shows you whether customers can find your business on Google and on the AI tools changing how they search, then builds the plan and does the work to fix what's holding you back.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lovorian.ai/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lovorian.ai/"
+        }
+      ]
     }
   ]
 }
 </script>
-
 <style>
   :root {
     --navy: #0B1F3A;
@@ -69,276 +72,485 @@
     --mid-gray: #6B6E75;
     --white: #FFFFFF;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
+    font-family: 'Public Sans', sans-serif;
     background: var(--navy);
     color: var(--white);
-    font-family: 'Public Sans', sans-serif;
-    line-height: 1.5;
   }
-
-  .test-banner {
-    background: var(--ember);
-    color: var(--white);
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    padding: 8px 16px;
-  }
-
-  section {
-    padding: 72px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-
-  h1, h2 {
+  h1, h2, h3 {
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    line-height: 1.15;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+  }
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    opacity: 1 !important;
   }
 
-  .hero { text-align: center; padding-top: 96px; }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: 24px; }
-  .hero p.lede {
-    font-size: 1.1rem;
-    color: var(--light-gray);
-    max-width: 600px;
-    margin: 0 auto 32px;
+  .hero {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 24px 100px;
   }
-  .cta-row {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-  }
-  .btn {
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 14px 28px;
-    border-radius: 4px;
-    text-decoration: none;
+  .hero-tag {
     display: inline-block;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(201,162,75,0.4);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: var(--white);
+  }
+  .hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 36px;
+  }
+  .hero-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
   }
   .btn-primary {
-    background: linear-gradient(135deg, var(--gold), var(--ember));
+    background: var(--gold);
     color: var(--navy);
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
   }
   .btn-secondary {
     background: transparent;
     color: var(--white);
-    border: 1px solid var(--mid-gray);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
   }
 
-  .problem { text-align: center; }
-  .problem p {
-    font-size: 1.15rem;
-    color: var(--light-gray);
-    max-width: 640px;
-    margin: 0 auto;
+  .stacked-logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 56px 24px 40px;
+    background: var(--navy);
   }
-
-  .how-it-works h2 { text-align: center; margin-bottom: 40px; font-size: 1.75rem; }
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+  .stacked-mark { width: 100px; height: auto; }
+  .stacked-wordmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  .step {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
-    padding: 28px 20px;
-  }
-  .step .step-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 12px;
-  }
-  .step h3 {
+  .stacked-name {
     font-family: 'Fraunces', serif;
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-  }
-  .step p { color: var(--light-gray); font-size: 0.95rem; }
-
-  .path-teaser {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    line-height: 1.15;
     text-align: center;
-    background: rgba(201,162,75,0.06);
-    border-radius: 8px;
-    padding: 48px 32px;
   }
-  .path-teaser p {
-    color: var(--light-gray);
-    max-width: 620px;
-    margin: 0 auto 24px;
-    font-size: 1.05rem;
+  .stacked-divider {
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+    position: relative;
   }
-  .path-teaser a {
+  .stacked-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -2.5px;
+    width: 5px;
+    height: 5px;
+    transform: translateX(-50%) rotate(45deg);
+    background: var(--gold);
+  }
+  .stacked-tagline {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .problem-section {
+    background: var(--charcoal);
+    padding: 64px 48px;
+    border-top: 1px solid rgba(201,162,75,0.25);
+    border-bottom: 1px solid rgba(201,162,75,0.25);
+  }
+  .problem-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .problem-section h2 {
+    font-size: 28px;
+    line-height: 1.35;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .problem-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 16px;
+  }
+  .problem-section p.emphasis {
     color: var(--gold);
     font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid var(--gold);
+    font-size: 17px;
   }
 
-  .proof { text-align: center; }
-  .proof h2 { font-size: 1.5rem; margin-bottom: 20px; }
-  .proof-card {
-    background: var(--light-gray);
-    color: var(--charcoal);
-    border-radius: 8px;
-    padding: 32px;
-    max-width: 640px;
+  .path-section {
+    background: #232529;
+    padding: 64px 48px;
+    border-top: 1px solid rgba(201,162,75,0.25);
+    border-bottom: 1px solid rgba(201,162,75,0.25);
+  }
+  .path-inner {
+    max-width: 680px;
     margin: 0 auto;
+    text-align: center;
+  }
+  .path-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    line-height: 1.35;
+    color: var(--white);
+    margin-bottom: 18px;
+  }
+  .path-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 14px;
+  }
+  .path-tagline {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    margin-bottom: 28px !important;
+  }
+
+  .howit-section {
+    background: #232529;
+    padding: 64px 48px;
+    border-top: 1px solid rgba(201,162,75,0.25);
+    border-bottom: 1px solid rgba(201,162,75,0.25);
+  }
+  .howit-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .howit-inner h2 {
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 40px;
+  }
+  .howit-row {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .howit-step {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,162,75,0.2);
+    border-radius: 8px;
+    padding: 32px 24px;
     text-align: left;
   }
-  .proof-card .client-name {
+  .howit-num {
     font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 30px;
+    color: var(--gold);
     margin-bottom: 12px;
-    color: var(--navy);
   }
-  .proof-card p { font-size: 0.95rem; }
-  .confirm-flag {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--ember);
-    background: rgba(181,101,29,0.1);
-    padding: 4px 10px;
-    border-radius: 4px;
+  .howit-step h3 {
+    font-size: 19px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .howit-step p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
   }
 
-  .who-for { text-align: center; }
-  .who-for p {
-    font-size: 1.1rem;
-    color: var(--light-gray);
-    max-width: 620px;
+  .whofor-section {
+    background: var(--navy);
+    padding: 64px 48px;
+  }
+  .whofor-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .whofor-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    line-height: 1.35;
+    color: var(--white);
+    margin-bottom: 18px;
+  }
+  .whofor-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.78);
+  }
+  .acronym-highlight {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .closing-section {
+    background: var(--navy);
+    padding: 72px 48px 88px;
+    text-align: center;
+  }
+  .closing-inner {
+    max-width: 640px;
     margin: 0 auto;
   }
-
-  .closing-cta {
-    text-align: center;
-    padding-bottom: 96px;
+  .closing-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: var(--white);
+    margin-bottom: 22px;
   }
-  .closing-cta h2 { font-size: 1.75rem; margin-bottom: 16px; }
-  .closing-cta p {
-    color: var(--light-gray);
-    margin-bottom: 28px;
+  .closing-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 18px;
+  }
+  .closing-section .btn-primary {
+    display: inline-block;
+    margin-top: 12px;
   }
 
   footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 32px 48px;
     text-align: center;
-    padding: 32px 24px 48px;
-    font-size: 0.8rem;
     color: var(--mid-gray);
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-
-  @media (max-width: 720px) {
-    .steps { grid-template-columns: 1fr; }
+    font-size: 13px;
   }
 </style>
 </head>
 <body>
 
-<div class="test-banner">TEST BUILD — pre-launch, not the live site — used for internal audit only</div>
+<div class="stacked-logo-block">
+  <img class="stacked-mark" src="assets/lovorian-phoenix-logo.png" alt="Lovorian phoenix mark">
+  <div class="stacked-wordmark">
+    <div class="stacked-name">LOVORIAN<br>CONSULTING</div>
+    <div class="stacked-divider"></div>
+    <div class="stacked-tagline">From AI-Uncertain to AI-Operational</div>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="audit.html" class="nav-cta">Get Your Audit</a></li>
+    </ul>
+  </nav>
+</header>
 
 <section class="hero">
-  <h1>Know your score. Get the roadmap. Let us fix it.</h1>
-  <p class="lede">
-    Lovorian shows you whether customers can actually find your business online —
-    then builds the plan and does the work to fix what's holding you back. Get
-    your results in 24 hours for $500, plus a free 30-minute call to walk through
-    what we found. From there, we'll guide you on what comes next to keep
-    improving.
+  <span class="hero-tag">Digital Presence Audit</span>
+  <h1>Know your score. Get the roadmap. Let me fix it.</h1>
+  <p>
+    Lovorian shows you whether customers can find your business — on
+    Google, and on the AI tools changing how they search. Then I build
+    the plan and, if you want, do the work to fix what's holding you
+    back. Get your results within two business days, plus a free
+    30-minute call to walk through what I found. From there, I'll guide
+    you on what comes next to keep improving.
   </p>
-  <div class="cta-row">
-    <a class="btn btn-primary" href="#">Get Your Audit</a>
-    <a class="btn btn-secondary" href="#how-it-works">See How It Works</a>
+  <div class="hero-ctas">
+    <a href="audit.html" class="btn-primary">Get Your Audit</a>
+    <a href="#how-it-works" class="btn-secondary">See How It Works</a>
   </div>
 </section>
 
-<section class="problem">
-  <p>
-    Customers don't search the way they used to. They ask an AI, get an
-    instant answer, and move on — often without ever seeing a website at all.
-    If your business isn't set up to be found and recommended in that moment,
-    you're invisible to a growing share of the people looking for exactly
-    what you offer.
-  </p>
-</section>
-
-<section class="how-it-works" id="how-it-works">
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-label">Step One</div>
-      <h3>Audit</h3>
-      <p>We check whether your business shows up — and shows up well — everywhere customers are actually looking, from search results to AI-generated answers.</p>
-    </div>
-    <div class="step">
-      <div class="step-label">Step Two</div>
-      <h3>Roadmap</h3>
-      <p>You get a clear, prioritized plan: what's broken, what it's costing you, and what to fix first.</p>
-    </div>
-    <div class="step">
-      <div class="step-label">Step Three</div>
-      <h3>Remediation</h3>
-      <p>We do the work ourselves, in-house, so you don't have to hire and manage a separate team to act on what we find.</p>
-    </div>
-  </div>
-</section>
-
-<section class="path-teaser">
-  <p>
-    The Audit is step one. Once your presence is fixed, most businesses want
-    to go further — from a clean public profile to AI systems that actually
-    work for the business day to day. That's the full Lovorian Path, and
-    we'll walk you through it when you're ready.
-  </p>
-  <a href="/services.html">See the full Path →</a>
-</section>
-
-<section class="proof">
-  <h2>Proven Results</h2>
-  <div class="proof-card">
-    <div class="client-name">Sea Ventures Pro Dive and Snorkel</div>
+<section class="problem-section">
+  <div class="problem-inner">
+    <h2>Customers are asking AI for answers — and skipping your website to get them.</h2>
     <p>
-      Sea Ventures worked with Lovorian to clean up a fragmented online
-      presence and build the technical foundation search engines and AI
-      tools need to find and trust a business.
+      More people now turn to AI tools to find businesses, compare
+      options, and get answers — and Google has built AI answers directly
+      into its own search results. Research shows that when one of those
+      AI answers appears, website clicks drop by roughly half. People get
+      their answer and move on — without ever visiting the business
+      behind it.
     </p>
-    <span class="confirm-flag">[CONFIRM: specific outcome details pending case study completion]</span>
+    <p class="emphasis">
+      That's not a trend on the horizon. It's already changing who gets
+      found — and who doesn't.
+    </p>
   </div>
 </section>
 
-<section class="who-for">
-  <p>
-    Built for Southern California small and midsize business owners who know
-    their online presence isn't working as hard as it should — and want
-    someone to fix it, not just tell them about it.
-  </p>
+<section class="howit-section" id="how-it-works">
+  <div class="howit-inner">
+    <h2>How it works</h2>
+    <div class="howit-row">
+      <div class="howit-step">
+        <div class="howit-num">&#9312;</div>
+        <h3>Score Your Visibility</h3>
+        <p>I score how easy it is for customers and AI to find you — across search, AI answers, and local listings — within two business days.</p>
+      </div>
+      <div class="howit-step">
+        <div class="howit-num">&#9313;</div>
+        <h3>Get Your Roadmap</h3>
+        <p>You get a plan that tells you exactly where to spend next — prioritized by what actually moves the needle — plus a free 30-minute call to walk through it.</p>
+      </div>
+      <div class="howit-step">
+        <div class="howit-num">&#9314;</div>
+        <h3>Fix What's Broken</h3>
+        <p>Choose to hire me for the fix, on a flat fee — no hourly surprises, no scope creep.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="closing-cta">
-  <h2>Ready to see where you stand?</h2>
-  <p>Get your audit in 24 hours for $500 — plus a free 30-minute call to walk through the results.</p>
-  <a class="btn btn-primary" href="#">Get Your Audit</a>
+<section class="whofor-section">
+  <div class="whofor-inner">
+    <h2>Built for Southern California business owners who don't have time to become search experts.</h2>
+    <p>
+      You run the business. You don't have hours to learn the difference
+      between <span class="acronym-highlight">SEO, GEO, and AEO</span> — the
+      three ways customers and AI now find companies like yours. That's my
+      job. I handle the technical side and hand you a plan in plain
+      English.
+    </p>
+  </div>
+</section>
+
+<!--
+  PROOF STRIP — HELD, DO NOT PUBLISH until Sea Ventures remediation work
+  is confirmed complete by Lucas. Copy is written in completed-state past
+  tense and would be inaccurate while work is still in progress.
+  Testimonial quote from Peter Seufert is confirmed and cleared for public
+  use. To re-enable: uncomment this block and re-run the SEO/GEO/AEO
+  structural pass + link check before it ships.
+
+<section class="proof-section">
+  <div class="proof-inner">
+    <h2>Real work, for a real business — the same work I do for owners across Southern California.</h2>
+    <p>
+      Sea Ventures Dive and Snorkel came to Lovorian for a deep
+      remediation — a Google Business Profile overhaul, a canonical
+      business name locked in across every platform, and the technical
+      groundwork so AI and generative search engines can actually find
+      them.
+    </p>
+    <div class="proof-client-name">Sea Ventures Dive and Snorkel</div>
+    <blockquote class="proof-quote">
+      "Lucas took something I didn't really understand and made it make
+      sense. He found every place my shop was getting missed online and
+      fixed it — without me having to babysit any of it. He treats my
+      business like it's his own. I trust him with all of it, and I'd
+      send any other owner straight to him."
+      <cite>— Peter Seufert, Owner, Sea Ventures Dive and Snorkel</cite>
+    </blockquote>
+  </div>
+</section>
+-->
+
+<section class="path-section">
+  <div class="path-inner">
+    <h2>The Audit is step one. There's a path after it.</h2>
+    <p>
+      Most businesses are invisible to AI — customers can't find them, and
+      they don't know it. Lovorian's path fixes that first, then goes
+      further: clean data, working AI agents, a dashboard that keeps it all
+      in check.
+    </p>
+    <p class="path-tagline">From AI-Uncertain to AI-Operational.</p>
+    <a href="services.html" class="btn-secondary">See the Full Path &rarr;</a>
+  </div>
+</section>
+
+<section class="closing-section">
+  <div class="closing-inner">
+    <h2>Ready to see where you stand?</h2>
+    <p>
+      $500 gets you a real, human-reviewed audit — not a generic scan. A
+      full score across search and AI visibility, delivered within two
+      business days, and a free 30-minute call to walk through exactly
+      what I found and what to do next.
+    </p>
+    <p>
+      Most businesses only need to win back one customer — someone who
+      finds you through an AI search you didn't even know you were
+      missing from — for this to pay for itself many times over. And
+      unlike a generic SEO tool, this audit looks at how AI answer
+      engines see you too — the fastest-growing way customers are
+      finding businesses right now, and the one most audits still
+      ignore.
+    </p>
+    <a href="audit.html" class="btn-primary">Get Your Audit</a>
+  </div>
 </section>
 
 <footer>
-  hello@lovorian.ai · lovorian.ai · Lucas Rigg, Managing Consultant / Founder<br>
-  This is a test build for internal audit purposes — not the public site.
+  hello@lovorian.ai &middot; lovorian.ai &middot; Lucas Rigg, Managing Consultant / Founder &middot; Wyoming LLC, CA-qualified
 </footer>
 
 </body>
