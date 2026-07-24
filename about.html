@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Lucas Rigg | Founder of Lovorian Consulting</title>
+<meta name="description" content="Lucas Rigg founded Lovorian Consulting to translate AI into plain English for small businesses, working personally with every client from audit through implementation.">
+<link rel="canonical" href="https://lovorian.ai/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lovorian.ai/#organization",
+      "name": "Lovorian Consulting",
+      "url": "https://lovorian.ai/",
+      "logo": "https://lovorian.ai/assets/lovorian-phoenix-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@lovorian.ai",
+        "telephone": "+1-310-344-5668",
+        "contactType": "customer service",
+        "areaServed": "US-CA"
+      },
+      "founder": { "@id": "https://lovorian.ai/about.html#person" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lovorian.ai/#website",
+      "url": "https://lovorian.ai/",
+      "name": "Lovorian Consulting",
+      "publisher": { "@id": "https://lovorian.ai/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lovorian.ai/about.html#person",
+      "name": "Lucas Rigg",
+      "jobTitle": "Managing Consultant / Founder",
+      "image": "https://lovorian.ai/assets/lucas-headshot-final.jpg",
+      "worksFor": { "@id": "https://lovorian.ai/#organization" },
+      "description": "Founder of Lovorian Consulting. Spent a decade in small-business IT support and later worked in enterprise IT at a major financial institution. Played Division 1 volleyball at UC Irvine.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of California, Irvine"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Torrance",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lovorian.ai/about.html#webpage",
+      "url": "https://lovorian.ai/about.html",
+      "name": "About Lucas Rigg | Founder of Lovorian Consulting",
+      "isPartOf": { "@id": "https://lovorian.ai/#website" },
+      "about": { "@id": "https://lovorian.ai/about.html#person" },
+      "description": "Lucas Rigg founded Lovorian Consulting to translate AI into plain English for small businesses, working personally with every client from audit through implementation.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lovorian.ai/about.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lovorian.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://lovorian.ai/about.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --navy: #0B1F3A;
+    --charcoal: #2B2D30;
+    --gold: #C9A24B;
+    --ember: #B5651D;
+    --light-gray: #F4F4F5;
+    --mid-gray: #6B6E75;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Public Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+  }
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+  }
+  .banner {
+    background: var(--gold);
+    color: var(--navy);
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+  }
+
+  .stacked-logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 56px 24px 40px;
+    background: var(--navy);
+  }
+  .stacked-mark { width: 100px; height: auto; }
+  .stacked-wordmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .stacked-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    line-height: 1.15;
+    text-align: center;
+  }
+  .stacked-divider {
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+    position: relative;
+  }
+  .stacked-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -2.5px;
+    width: 5px;
+    height: 5px;
+    transform: translateX(-50%) rotate(45deg);
+    background: var(--gold);
+  }
+  .stacked-tagline {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo-spacer { width: 1px; }
+  nav ul { list-style: none; display: flex; gap: 32px; }
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+  nav a.current { opacity: 1; color: var(--gold); font-weight: 600; }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+  }
+  .about-headshot {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+    margin-top: 28px;
+    border: 3px solid var(--gold);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  .services-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,162,75,0.4);
+    padding-bottom: 2px;
+  }
+
+  .about-hero {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 24px 70px;
+  }
+  .about-hero h1 { font-size: 38px; line-height: 1.2; color: var(--white); }
+  .about-tagline {
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: 16px;
+  }
+  .about-roi-line {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    font-style: italic;
+    margin-top: 12px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-section { padding: 56px 48px; border-top: 1px solid rgba(201,162,75,0.2); }
+  .about-section.alt { background: var(--charcoal); }
+  .about-section.navy-alt { background: #0E2445; }
+  .about-inner { max-width: 700px; margin: 0 auto; }
+  .about-inner h2 { font-size: 26px; color: var(--gold); margin-bottom: 20px; line-height: 1.3; }
+  .about-inner p { font-size: 16px; line-height: 1.75; color: rgba(255,255,255,0.82); margin-bottom: 18px; }
+  .about-inner p:last-child { margin-bottom: 0; }
+  .pull-note {
+    display: inline-block;
+    background: rgba(255,255,255,0.06);
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  .about-closing {
+    background: var(--navy);
+    padding: 72px 48px 88px;
+    text-align: center;
+    border-top: 1px solid rgba(201,162,75,0.25);
+  }
+  .about-closing-inner { max-width: 620px; margin: 0 auto; }
+  .about-closing h2 { font-size: 30px; color: var(--white); margin-bottom: 18px; }
+  .about-closing p { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.78); margin-bottom: 28px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 32px 48px;
+    text-align: center;
+    color: var(--mid-gray);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="stacked-logo-block">
+  <img class="stacked-mark" src="assets/lovorian-phoenix-logo.png" alt="Lovorian phoenix mark">
+  <div class="stacked-wordmark">
+    <div class="stacked-name">LOVORIAN<br>CONSULTING</div>
+    <div class="stacked-divider"></div>
+    <div class="stacked-tagline">From AI-Uncertain to AI-Operational</div>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="current">About</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="audit.html" class="nav-cta">Get Your Audit</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="about-hero">
+  <h1>I&rsquo;m Lucas &mdash; and Lovorian is just me, on purpose.</h1>
+  <p class="about-tagline">I translate AI into plain English for small businesses.</p>
+  <p class="about-roi-line">If I don't think something will pay for itself, I'll tell you before we start.</p>
+  <img class="about-headshot" src="assets/lucas-headshot-final.jpg" alt="Lucas Rigg, Founder of Lovorian Consulting">
+</section>
+
+<section class="about-section">
+  <div class="about-inner">
+    <p>
+      Most AI consulting sells you more: more tools, more seats, a bigger
+      roadmap, a longer contract. I started Lovorian to do the opposite &mdash;
+      find what actually saves you time, saves you money, or grows your
+      bottom line, one stage at a time.
+    </p>
+  </div>
+</section>
+
+<section class="about-section alt">
+  <div class="about-inner">
+    <h2>Most people are drowning in AI, not using it</h2>
+    <p>
+      Every week there&rsquo;s a new tool, a new platform, a new thing you&rsquo;re
+      supposed to already be using. The business owners I meet don&rsquo;t
+      need another option &mdash; they need someone to translate the noise
+      into three things that actually matter for their business, and
+      ignore the rest.
+    </p>
+    <p class="pull-note">
+      &ldquo;That&rsquo;s the job. Not adding to the pile &mdash; cutting through it.&rdquo;
+    </p>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-inner">
+    <h2>Why I started this</h2>
+    <p>
+      I spent a decade in small-business IT support, seeing up close what
+      actually trips businesses up day to day. Later, I moved into
+      enterprise IT with executives at a major financial institution &mdash;
+      the other side of the coin: real structure and governance, not
+      guesswork. Before either, I played Division 1 volleyball at UC
+      Irvine, which is honestly where the discipline behind how I run
+      Lovorian started.
+    </p>
+    <p>
+      What I kept seeing was the same story: a business owner gets
+      pitched an expensive platform, spends months implementing it, and
+      ends up with software their team quietly stops using. The problem
+      was never that AI couldn&rsquo;t help &mdash; it&rsquo;s that the tools built for
+      enterprise never made it down to the businesses that needed them
+      most.
+    </p>
+    <p class="pull-note">
+      &ldquo;That&rsquo;s the belief Lovorian is built on: the same thinking that
+      works for a major financial institution should be available to the
+      small business down the street &mdash; just built to fit how they
+      actually work.&rdquo;
+    </p>
+  </div>
+</section>
+
+<section class="about-section navy-alt">
+  <div class="about-inner">
+    <h2>Why it works in stages</h2>
+    <p>
+      I didn&rsquo;t build Lovorian as a menu of services. I built it as a
+      sequence, because that&rsquo;s how trust actually works between a
+      business and the people touching its systems.
+    </p>
+    <p>
+      It starts with visibility &mdash; the lowest-risk place to start.
+      Before I touch your internal data or workflows, I look at what&rsquo;s
+      already public: how customers and AI find you, or don&rsquo;t. No system
+      access required. You get a diagnosis, a roadmap, and the fix,
+      before I&rsquo;ve asked for anything more.
+    </p>
+    <p class="pull-note">
+      &ldquo;Only once that trust is established does it make sense to go
+      deeper &mdash; your data, your workflows, eventually a dashboard to keep
+      it all in view. Each stage earns the next.&rdquo;
+    </p>
+    <a href="services.html" class="services-link">See the Full Path →</a>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-inner">
+    <h2>You work with me &mdash; not a handoff</h2>
+    <p>
+      When you hire Lovorian, the person who audits your business is the
+      same person who builds the roadmap and does the fix. No account
+      manager, no junior handed your project, no committee. I keep my
+      client list small on purpose, so the people I work with get my
+      actual attention.
+    </p>
+    <p>
+      It also means I own the outcome. If something I set up isn&rsquo;t
+      working, that&rsquo;s mine to fix &mdash; not something to escalate to a
+      support queue.
+    </p>
+  </div>
+</section>
+
+<section class="about-section navy-alt">
+  <div class="about-inner">
+    <h2>How I think about your data</h2>
+    <p>
+      AI is only worth using if you can trust where your information
+      goes. I won&rsquo;t plug your business into a black box. Every tool I
+      recommend, I can tell you exactly what it touches, where your data
+      actually lives, and who else can reach it &mdash; before it goes
+      anywhere near your systems. Security and governance aren&rsquo;t an
+      afterthought; they&rsquo;re the reason I&rsquo;m careful about what I
+      recommend in the first place.
+    </p>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-inner">
+    <h2>Meet in person, or work with me remotely</h2>
+    <p>
+      I&rsquo;m based in Torrance and work across Southern California &mdash; happy
+      to meet in person or work remotely, whichever fits how you run your
+      business.
+    </p>
+  </div>
+</section>
+
+<section class="about-closing">
+  <div class="about-closing-inner">
+    <h2>Let&rsquo;s find your three things</h2>
+    <p>
+      A free 30-minute call is usually enough to tell whether AI can
+      actually help your business right now &mdash; and exactly where to
+      start. No pitch, no obligation, just a straight answer.
+    </p>
+    <a href="contact.html" class="btn-primary">Book a Free Consult</a>
+  </div>
+</section>
+
+<footer>
+  hello@lovorian.ai &middot; lovorian.ai &middot; Lucas Rigg, Managing Consultant / Founder
+</footer>
+
+</body>
+</html>
