@@ -40,13 +40,9 @@
       "@id": "https://lovorian.ai/about.html#person",
       "name": "Lucas Rigg",
       "jobTitle": "Managing Consultant / Founder",
-      "image": "https://lovorian.ai/assets/lucas-headshot-final.jpg",
+      "image": "https://lovorian.ai/assets/lucas-headshot-final.png",
       "worksFor": { "@id": "https://lovorian.ai/#organization" },
-      "description": "Founder of Lovorian Consulting. Spent a decade in small-business IT support and later worked in enterprise IT at a major financial institution. Played Division 1 volleyball at UC Irvine.",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "University of California, Irvine"
-      },
+      "description": "Founder of Lovorian Consulting. Spent a decade in hands-on small-business IT support, and later worked in enterprise IT with executives at a major financial institution.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Torrance",
@@ -194,14 +190,13 @@
     opacity: 1 !important;
   }
   .about-headshot {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center center;
+    width: auto;
+    max-width: 340px;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
     margin-top: 28px;
-    border: 3px solid var(--gold);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    filter: drop-shadow(0 12px 28px rgba(0,0,0,0.45));
   }
   .services-link {
     display: inline-block;
@@ -314,7 +309,7 @@
   <h1>I&rsquo;m Lucas &mdash; and Lovorian is just me, on purpose.</h1>
   <p class="about-tagline">I translate AI into plain English for small businesses.</p>
   <p class="about-roi-line">If I don't think something will pay for itself, I'll tell you before we start.</p>
-  <img class="about-headshot" src="assets/lucas-headshot-final.jpg" alt="Lucas Rigg, Founder of Lovorian Consulting">
+  <img class="about-headshot" src="assets/lucas-headshot-final.png" alt="Lucas Rigg, Founder of Lovorian Consulting">
 </section>
 
 <section class="about-section">
@@ -348,13 +343,14 @@
   <div class="about-inner">
     <h2>Why I started this</h2>
     <p>
-      I spent a decade in small-business IT support, seeing up close what
-      actually trips businesses up day to day. Later, I moved into
-      enterprise IT with executives at a major financial institution &mdash;
-      the other side of the coin: real structure and governance, not
-      guesswork. Before either, I played Division 1 volleyball at UC
-      Irvine, which is honestly where the discipline behind how I run
-      Lovorian started.
+      I spent a decade in small-business IT support &mdash; not consulting
+      from a distance, but in the weeds with owners, doing desktop and
+      application support, general tech break/fix, and day-to-day IT
+      management for small businesses. Later, I moved into enterprise
+      IT with executives at a major financial institution, working
+      inside the kind of structure and governance that a Fortune 500
+      name demands &mdash; real security rules, real accountability, real
+      stakes.
     </p>
     <p>
       What I kept seeing was the same story: a business owner gets
