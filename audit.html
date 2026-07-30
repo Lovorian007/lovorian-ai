@@ -231,6 +231,23 @@
   .score-band { display: block; font-size: 0.68rem; color: var(--ember); text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; margin-top: 2px; }
   .score-meaning-panel { background: rgba(201,162,75,0.06); border-left: 3px solid var(--gold); border-radius: 4px; padding: 18px 20px; margin: 24px 0; }
   .score-meaning-panel p { margin: 0; font-size: 0.92rem; line-height: 1.65; }
+  .band-legend { max-width: 100%; margin: 28px 0; font-family: 'Public Sans', sans-serif; }
+  .band-legend-title { font-size: 0.88rem; line-height: 1.5; color: #ccc; margin-bottom: 30px; text-align: center; }
+  .band-legend-barwrap { position: relative; }
+  .band-legend-bar { display: flex; width: 100%; border-radius: 6px; overflow: hidden; }
+  .band-legend-cell { flex: 0 0 20%; padding: 10px 4px 11px; text-align: center; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid rgba(255,255,255,0.15); }
+  .band-legend-cell:last-child { border-right: none; }
+  .band-legend-range { font-size: 0.7rem; font-weight: 700; opacity: 0.85; }
+  .band-legend-name { font-size: 0.78rem; font-weight: 700; font-family: 'Fraunces', serif; }
+  .band-legend-desc { font-size: 0.62rem; line-height: 1.25; opacity: 0.9; }
+  .band-legend-marker { position: absolute; top: -26px; transform: translateX(-50%); text-align: center; white-space: nowrap; z-index: 2; }
+  .band-legend-marker-label { display: inline-block; background: var(--navy); border: 1px solid var(--gold); color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em; padding: 3px 9px; border-radius: 4px; }
+  .band-legend-marker-stem { display: block; width: 0; height: 0; margin: 0 auto; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 7px solid var(--gold); }
+  @media (max-width: 560px) {
+    .band-legend-desc { display: none; }
+    .band-legend-name { font-size: 0.68rem; }
+    .band-legend-range { font-size: 0.62rem; }
+  }
   .placeholder-note { font-size: 0.8rem; font-style: italic; color: #888; margin-top: 12px; }
   .honesty-note { font-size: 0.85rem; font-style: italic; color: #999; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; }
   .audit-closing { text-align: center; padding: 60px 24px; background: rgba(0,0,0,0.2); }
@@ -388,12 +405,51 @@
       <tr><td>Target (full roadmap)</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td><strong>9.0</strong> <span class="score-band">Best-in-Class</span></td></tr>
     </table>
 
+    <div class="band-legend">
+      <div class="band-legend-title">
+        What the score means &mdash; scored against near-complete optimization across traditional search <em>and</em> AI answer engines at once, a scale where a 10 is rare and most small businesses land at a 3&ndash;4.
+      </div>
+      <div class="band-legend-barwrap">
+        <div class="band-legend-marker" style="left: 62%;">
+          <span class="band-legend-marker-label">MY SCORE&nbsp;&nbsp;6.2</span>
+          <span class="band-legend-marker-stem"></span>
+        </div>
+        <div class="band-legend-bar">
+          <div class="band-legend-cell" style="background:#8C3A1F; color:#fff;">
+            <span class="band-legend-range">0&ndash;2</span>
+            <span class="band-legend-name">Invisible</span>
+            <span class="band-legend-desc">Search &amp; AI can't reliably find you</span>
+          </div>
+          <div class="band-legend-cell" style="background:var(--ember); color:#fff;">
+            <span class="band-legend-range">3&ndash;4</span>
+            <span class="band-legend-name">Below the Curve</span>
+            <span class="band-legend-desc">Where most small businesses sit</span>
+          </div>
+          <div class="band-legend-cell" style="background:#C4954A; color:#1C2230;">
+            <span class="band-legend-range">5&ndash;6</span>
+            <span class="band-legend-name">Above Average</span>
+            <span class="band-legend-desc">A solid, competitive foundation</span>
+          </div>
+          <div class="band-legend-cell" style="background:var(--gold); color:#1C2230;">
+            <span class="band-legend-range">7&ndash;8</span>
+            <span class="band-legend-name">Front-Runner</span>
+            <span class="band-legend-desc">Ahead of nearly everyone local</span>
+          </div>
+          <div class="band-legend-cell" style="background:#E8CD84; color:#1C2230;">
+            <span class="band-legend-range">9&ndash;10</span>
+            <span class="band-legend-name">Best-in-Class</span>
+            <span class="band-legend-desc">Near-complete across search + AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="score-meaning-panel">
       <p><strong style="color:var(--gold);">What these numbers mean:</strong> this isn't a school grade. It's scored against near-perfect optimization across traditional search, AI assistants, and answer engines &mdash; a bar almost no one reaches. Most small businesses land at a <strong>3&ndash;4</strong> ("Below the Curve"); a <strong>5&ndash;6 is "Above Average," ahead of most.</strong> So my 6.2 is a genuinely strong spot &mdash; and I'm still climbing. Your audit shows your score <em>and</em> what band it's in, so the number always means something.</p>
     </div>
 
     <p style="text-align:center; margin: 20px 0;">
-      <a href="#audit-pdf-pending" class="btn-secondary pending-flag" title="Link to branded full audit report pending upload">View my full audit report &rarr;</a>
+      <a href="assets/lovorian-digital-presence-audit.pdf" class="btn-secondary" target="_blank" rel="noopener">View my full audit report &rarr;</a>
     </p>
     <p style="font-size:0.85rem; color:#999; text-align:center;"><em>(opens the branded full report &mdash; my own audit)</em></p>
 
